@@ -27,7 +27,7 @@ class _ComputeSum extends State {
   var n2 = 0;
   var sum = 0;
 
-  void AddTwoNumber() {
+  void sumarDosEnteros() {
     n1 = int.parse(tnum1.text);
     n2 = int.parse(tnum2.text);
 
@@ -44,12 +44,14 @@ class _ComputeSum extends State {
       child: Column(
         children: [
           TextField(
+            keyboardType: TextInputType.number,
             controller: tnum1,
             decoration: InputDecoration(
                 labelText: "ingresar un número",
                 hintText: ""),
           ),
           TextField(
+            keyboardType: TextInputType.number,
             controller: tnum2,
             decoration: InputDecoration(
                 labelText: "ingresar un número",
@@ -57,7 +59,7 @@ class _ComputeSum extends State {
           ),
           RaisedButton(
             onPressed: () {
-              AddTwoNumber();
+              sumarDosEnteros();
             },
             child: Text("sumar"),
           ),
